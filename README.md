@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Oque vamos desenvolver
+Nesse projeto vamos desenvolver um jogo de adivinhar palavras inspirado no  [Wordle](https://www.nytimes.com/games/wordle/index.html)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Como o jogo funciona?
+## Objetivo
+O objetivo é adivinhar uma palavra aleatória de 5 letras, após uma tentativa você recebe dicas sobre as letras
 
-## Available Scripts
+- Amarelo: A letra existe mas está no lugar incorreto
+- Verde A letra existe e está no lugar correto
 
-In the project directory, you can run:
+Com essas dicas o jogador precisa deduzir a palavra correta em menos de 6 tentativas
 
-### `npm start`
+## Inspirações
+Caso você queira entender na pratica como o jogo funciona dê uma olhadinha nos links abaixo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Wordle](https://www.nytimes.com/games/wordle/index.html) (Versão original em inglês)
+[Letreco](https://www.gabtoschi.com/letreco/) (Versão em português)
+[term.ooo](https://term.ooo/) (Versão em português com opções de jogar com 1, 2 ou 4 palavras)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+# Requisitos
+Para poder ser participar da votação, o seu código **OBRIGATORIAMENTE** precisa cumprir atender os pontos abaixo
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [ ] Deve ser possível jogar uma palavra aleatória
+- [ ] Deve mostrar as dicas corretas
+- [ ] Deve exibir a palavra correta após o Player acertar
+- [ ] Deve conter os testes para as funcionalidades
+	- [ ] As dicas são mostradas corretamente
+	- [ ] Ao final do jogo é exibido uma 
+- [ ] Fazer o deploy
+- [ ] Preencher o formulário de participação
 
-### `npm run build`
+# Sugestão de como desenvolver
+As sugestões abaixo são apenas um guia para poder facilitar o desenvolvimento, mas sinta-se livre para fazer da forma que preferir desde que os requisitos estejam sendo atendidos
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 1 - Criar um Input de texto para o usuário enviar a palavra
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Oque é esperado
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Deve conter um input
+- A Palavra deve ser armazenada
 
-### `npm run eject`
+## 2 - Construa uma tabela com 6 linhas () e 5 colunas (Quantidade de letras)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### O que é esperado
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Ter um quadro com 6 linhas`<tr>` (Quantidade de tentativas)
+- Ter um quadro com 5 colunas `<td>` (Quantidade de letras)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 3 - Criar um botão para enviar o Input
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Oque é esperado
 
-## Learn More
+- O botão está desabilitado quando a palavra contem menos ou mais de 5 letras
+- Ao clicar a palavra ser mostrada na linha da tabela (Uma letra em cada célula)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 3 - Criar um botão para limpar o Input
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Oque é esperado
+- O input é limpo após clicar no botão
 
-### Code Splitting
+## 4 - Pegar uma palavra randomica do arquivo (no data) para ser a palavra chave
+### O que é esperado
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Quando a aplicação carregue, uma palavra randomica
+- Guardar a palavra selecionada em um gerenciador de Estado (Redux ou Context)
 
-### Analyzing the Bundle Size
+## 5 - Implementar a logica de verificação
+### Oque é esperado
+- Armazenar oque o usuario digitou
+- Verificar a posição das letras (Amarelo = letra existente no lugar errado e verde = lugar certo)
+- Mostra um aviso caso a palavra não exista no banco de palavras
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 6 - Implementa a logica de verificação da palavra chave
+### Oque é esperado
+ - Se o usuario acertar
+	- Verica-se é redirecionado para a tela de feedback
+- Se o usuario errar
+	- Ir para a proxima linha
+- Se o usuario errar e não tiver mais tentativas
+	- Redirecionar para a tela de feedback
 
-### Making a Progressive Web App
+## 7 - Feedbacks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Deve mostrar uma mensagem de acordo com o numero de tentativas
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Exemplo:
+| Tentativas            | Resultado     |
+|-----------------------|---------------|
+| Menos de 3 tentativas | Excelente     |
+| > 3 e > 5 tentativas  | Muito bom     |
+| 6 tentativas          | Foi por pouco |
+| Não tiver acertado    | Você perdeu   |
