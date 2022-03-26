@@ -1,12 +1,11 @@
-# Oque vamos desenvolver
-Nesse projeto vamos desenvolver um jogo de adivinhar palavras inspirado no  [Wordle](https://www.nytimes.com/games/wordle/index.html)
+git@github.com:Guthias/wordle-template.git# Oque vamos desenvolver
+Nesse projeto vamos desenvolver um jogo de adivinhar palavras inspirado no  [Wordle](https://www.nytimes.com/games/wordle/index.html) sinta-se livre para desenvolver da forma que preferir, use e abuse da sua criatividade 😄
 
 # Como o jogo funciona?
-## Objetivo
 O objetivo é adivinhar uma palavra aleatória de 5 letras, após uma tentativa você recebe dicas sobre as letras
 
 - Amarelo: A letra existe mas está no lugar incorreto
-- Verde A letra existe e está no lugar correto
+- Verde: A letra existe e está no lugar correto
 
 Com essas dicas o jogador precisa deduzir a palavra correta em menos de 6 tentativas
 
@@ -17,30 +16,38 @@ Caso você queira entender na pratica como o jogo funciona dê uma olhadinha nos
 [Letreco](https://www.gabtoschi.com/letreco/) (Versão em português)
 [term.ooo](https://term.ooo/) (Versão em português com opções de jogar com 1, 2 ou 4 palavras)
 
+# Como iniciar o projeto
+- Vá até o repositório [wordle-template](https://github.com/Guthias/wordle-template)
+- Clique em **Use this template**
+- Escreva o nome do seu projeto
+- Clique em **Create a repository from this template**
+- Copie a chave SSH e comece a desenvolver 🥰
 
 # Requisitos
-Para poder ser participar da votação, o seu código **OBRIGATORIAMENTE** precisa cumprir atender os pontos abaixo
+Para poder participar da votação, o seu código **OBRIGATORIAMENTE** precisa atender os pontos abaixo
 
-- [ ] Deve ser possível jogar uma palavra aleatória
-- [ ] Deve mostrar as dicas corretas
-- [ ] Deve exibir a palavra correta após o Player acertar
-- [ ] Deve conter os testes para as funcionalidades
-	- [ ] As dicas são mostradas corretamente
-	- [ ] Ao final do jogo é exibido uma 
+Sua aplicação precisa conter as funcionalidades abaixo e elas precisam ser testadas
+- [ ] As dicas são mostradas corretamente
+- [ ] Deve ser possível escrever uma palavra
+- [ ] Deve ter o comportamento esperado caso o Player ganhe
+- [ ] Deve ter o comportamento esperado caso o Player perca
+
+Além disso você precisa
 - [ ] Fazer o deploy
 - [ ] Preencher o formulário de participação
 
+
 # Sugestão de como desenvolver
-As sugestões abaixo são apenas um guia para poder facilitar o desenvolvimento, mas sinta-se livre para fazer da forma que preferir desde que os requisitos estejam sendo atendidos
+As sugestões abaixo são apenas um guia para poder facilitar o desenvolvimento, mas sinta-se **TOTALMENTE LIVRE** para fazer da forma que preferir desde que os requisitos estejam sendo atendidos
 
 ## 1 - Criar um Input de texto para o usuário enviar a palavra
 
 ### Oque é esperado
 
 - Deve conter um input
-- A Palavra deve ser armazenada
+- A Palavra deve ser armazenada no estado
 
-## 2 - Construa uma tabela com 6 linhas () e 5 colunas (Quantidade de letras)
+## 2 - Construa uma tabela com 6 linhas (Quantidade de tentativas) e 5 colunas (Quantidade de letras)
 
 ### O que é esperado
 
@@ -54,33 +61,36 @@ As sugestões abaixo são apenas um guia para poder facilitar o desenvolvimento,
 - O botão está desabilitado quando a palavra contem menos ou mais de 5 letras
 - Ao clicar a palavra ser mostrada na linha da tabela (Uma letra em cada célula)
 
-## 3 - Criar um botão para limpar o Input
+## 4 - Criar um botão para limpar o Input
 
 ### Oque é esperado
 - O input é limpo após clicar no botão
 
-## 4 - Pegar uma palavra randomica do arquivo (no data) para ser a palavra chave
-### O que é esperado
+## 5 - Pegar uma palavra _randômica_ do arquivo `data/wordlist.js` para ser a palavra chave
 
-- Quando a aplicação carregue, uma palavra randomica
+### O que é esperado
+- Quando a aplicação carregue, uma palavra _randômica_
 - Guardar a palavra selecionada em um gerenciador de Estado (Redux ou Context)
 
-## 5 - Implementar a logica de verificação
-### Oque é esperado
-- Armazenar oque o usuario digitou
-- Verificar a posição das letras (Amarelo = letra existente no lugar errado e verde = lugar certo)
-- Mostra um aviso caso a palavra não exista no banco de palavras
+## 6 - Implementar a logica de verificação
 
-## 6 - Implementa a logica de verificação da palavra chave
 ### Oque é esperado
- - Se o usuario acertar
-	- Verica-se é redirecionado para a tela de feedback
-- Se o usuario errar
-	- Ir para a proxima linha
-- Se o usuario errar e não tiver mais tentativas
+- Armazenar oque o usuário digitou
+- Verificar a posição das letras
+	- Amarelo: letra existente no lugar errado
+	- Verde: letra existente no lugar certo
+- Mostra um aviso caso a palavra não exista no banco de palavras (`data/wordlist.js`)
+
+## 7 - Implementa a logica de verificação da palavra chave
+### Oque é esperado
+ - Se o usuário acertar
+	- Verifica-se é redirecionado para a tela de feedback
+- Se o usuário errar
+	- Ir para a próxima linha
+- Se o usuário errar e não tiver mais tentativas
 	- Redirecionar para a tela de feedback
 
-## 7 - Feedbacks
+## 8 - Feedbacks
 
 - Deve mostrar uma mensagem de acordo com o numero de tentativas
 
