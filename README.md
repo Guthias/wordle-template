@@ -14,24 +14,20 @@ Com essas dicas o jogador precisa deduzir a palavra correta em menos de 6 tentat
 ## Inspirações
 Caso você queira entender na pratica como o jogo funciona dê uma olhadinha nos links abaixo
 
-[Wordle](https://www.nytimes.com/games/wordle/index.html) (Versão original em inglês)
-[Letreco](https://www.gabtoschi.com/letreco/) (Versão em português)
-[term.ooo](https://term.ooo/) (Versão em português com opções de jogar com 1, 2 ou 4 palavras)
+- [Wordle](https://www.nytimes.com/games/wordle/index.html) (Versão original em inglês)
+- [Letreco](https://www.gabtoschi.com/letreco/) (Versão em português)
+- [term.ooo](https://term.ooo/) (Versão em português com opções de jogar com 1, 2 ou 4 palavras)
 
 # Como iniciar o projeto
 - Vá até o repositório [wordle-template](https://github.com/Guthias/wordle-template)
 - Clique em **Use this template**
 
-<br />
 ![Imagem para o tutorial](assets/tutorial-parte-1.PNG)
-<br />
 
 - Escreva o nome do seu projeto
 - Clique em **Create a repository from this template**
 
-<br />
 ![Imagem para o tutorial](assets/tutorial-parte-2.PNG)
-<br />
 
 - Copie a chave SSH e comece a desenvolver 🥰
 
