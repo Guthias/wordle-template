@@ -42,7 +42,7 @@ Sua aplicação precisa conter as funcionalidades abaixo e elas precisam ser tes
 
 Além disso você precisa
 - [ ] Fazer o deploy
-- [ ] Preencher o formulário de participação
+- [ ] Preencher o [formulário de participação](https://forms.gle/cHdk8nTbHBPcNpBz7)
 
 
 # Sugestão de como desenvolver
