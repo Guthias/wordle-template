@@ -1,4 +1,4 @@
-git@github.com:Guthias/wordle-template.git# Oque vamos desenvolver
+# O que vamos desenvolver
 Nesse projeto vamos desenvolver um jogo de adivinhar palavras inspirado no  [Wordle](https://www.nytimes.com/games/wordle/index.html) sinta-se livre para desenvolver da forma que preferir, use e abuse da sua criatividade 😄
 
 # Como o jogo funciona?
@@ -8,7 +8,9 @@ O objetivo é adivinhar uma palavra aleatória de 5 letras, após uma tentativa 
 - Verde: A letra existe e está no lugar correto
 
 Com essas dicas o jogador precisa deduzir a palavra correta em menos de 6 tentativas
-
+<br />
+![Imagem para o tutorial](assets/game-preview.PNG)
+<br />
 ## Inspirações
 Caso você queira entender na pratica como o jogo funciona dê uma olhadinha nos links abaixo
 
@@ -19,8 +21,18 @@ Caso você queira entender na pratica como o jogo funciona dê uma olhadinha nos
 # Como iniciar o projeto
 - Vá até o repositório [wordle-template](https://github.com/Guthias/wordle-template)
 - Clique em **Use this template**
+
+<br />
+![Imagem para o tutorial](assets/tutorial-parte-1.PNG)
+<br />
+
 - Escreva o nome do seu projeto
 - Clique em **Create a repository from this template**
+
+<br />
+![Imagem para o tutorial](assets/tutorial-parte-2.PNG)
+<br />
+
 - Copie a chave SSH e comece a desenvolver 🥰
 
 # Requisitos
